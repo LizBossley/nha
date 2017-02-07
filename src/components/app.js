@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import MainNav from './main_navigation.js';
+import MainNav from '../containers/main_navigation.js';
 
 export default class App extends Component {
   render() {
