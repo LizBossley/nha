@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class MainNavigation extends Component {
+class MainNav extends Component {
 	render() {
 		return(
 			<div className="top-bar">
@@ -12,11 +12,11 @@ class MainNavigation extends Component {
 			  	<div className="top-bar-right">
 				    <ul className="dropdown menu" data-dropdown-menu>
 				      	<li>
-				        	<a href="#">One</a>
+				        	<a href="#">John Student</a>
 				        	<ul className="menu vertical">
-					          	<li><a href="#">One</a></li>
-					          	<li><a href="#">Two</a></li>
-					          	<li><a href="#">Three</a></li>
+					          	<li><a href="#">Account</a></li>
+					          	<li><a href="#">Help</a></li>
+					          	<li><a href="#">Logout</a></li>
 			        		</ul>
 			      		</li>
 			    	</ul>
@@ -26,4 +26,4 @@ class MainNavigation extends Component {
 	}
 }
 
-export default MainNavigation;
+export default MainNav;
