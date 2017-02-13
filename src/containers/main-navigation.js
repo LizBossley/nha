@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class MainNav extends Component {
 	render() {
@@ -6,7 +7,7 @@ class MainNav extends Component {
 			<div className="top-bar">
 				<div className="top-bar-left">
 					<ul className="dropdown menu" data-dropdown-menu>
-				      	<li className="menu-text">Site Title</li>
+				      	<li className="menu-text"><Link to="/">Site Title</Link></li>
 				    </ul>
 				</div>
 			  	<div className="top-bar-right">
@@ -14,7 +15,7 @@ class MainNav extends Component {
 				      	<li>
 				        	<a href="#">John Student</a>
 				        	<ul className="menu vertical">
-					          	<li><a href="#">Account</a></li>
+					          	<li><Link to="/account">Account</Link></li>
 					          	<li><a href="#">Help</a></li>
 					          	<li><a href="#">Logout</a></li>
 			        		</ul>

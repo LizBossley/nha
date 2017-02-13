@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { connect} from 'react-redux';
 
-class MemberList extends Component {
+import SearchBar from './recruit-search-bar';
+import RecruitList from './recruit-list';
+
+class Recruitment extends Component {
 	renderList() {
 		return this.props.members.map((member) => {
 			return (
@@ -16,18 +19,11 @@ class MemberList extends Component {
 
 	render() {
 		return (
-			<table className="stacked hover">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Race</th>
-					</tr>
-				</thead>
-				<tbody>
-					{this.renderList()}
-				</tbody>
-			</table>
+			<div>
+				<h2>Recruitment</h2>
+				<SearchBar />
+				<RecruitList />
+			</div>
 		);
 	}
 }
@@ -40,8 +36,10 @@ function mapStateToProps(state) {
 	};
 }
 
+
+
 //Promote BookList from a component to a container - it needs to know about
 //this new dispatch method, selectBook. Make it available as a prop.
-export default connect(mapStateToProps, null)(MemberList);
+export default connect(mapStateToProps, null)(Recruitment);
 
 

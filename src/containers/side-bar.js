@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class SideBar extends Component {
 	render() {
@@ -12,7 +13,8 @@ class SideBar extends Component {
 				      <li><a href="#">Item 1B</a></li>
 				    </ul>
 				  </li>
-				  <li><a href="#">Item 2</a></li>
+				  <li><Link to="/directory">Directory</Link></li>
+				  <li><Link to="/recruitment">Recruitment</Link></li>
 				</ul>
 			</div>
 		);
