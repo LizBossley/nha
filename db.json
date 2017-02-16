@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "some comment",
+      "notes": "Notes",
+      "courses" : [ 1, 2, 3 ]
+    }
+  ],
+  "faculty": [
+    {
+      "id": 1,
+      "body": "some comment"
+    }
+  ],
+  "recruits": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "subject": "course 1",
+      "teacherId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

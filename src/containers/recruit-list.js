@@ -3,19 +3,20 @@ import { connect } from 'react-redux';
 
 class RecruitList extends Component {
 	renderRecruit(recruitData) {
-		console.log(recruitData);
-		console.log("here");
-		const name = recruitData.name;
-		// const temps = cityData.list.map(weather => weather.main.temp);
-		// const pressures = cityData.list.map(weather => weather.main.pressure);
-		// const humidities = cityData.list.map(weather => weather.main.humidity);
-		// const { lon, lat } = cityData.city.coord; //es6 syntax
+		if (!recruitData) {
+			return <tr><td>No results to display. Try another name</td></tr>;
+		}
 
+		console.log(recruitData);
+
+		const name = recruitData.name;
+		const weight = recruitData.weight;
 
 		return (
 			<tr key={name}>
 				<td>{name}</td>
-				<td>I wish</td>
+				<td>{weight}</td>
+				<td></td>
 			</tr>
 		);
 	}
@@ -25,10 +26,8 @@ class RecruitList extends Component {
 			<table className="table table-hover">
 				<thead>
 					<tr>
-						<th>City</th>
-						<th>Temperature (K)</th>
-						<th>Pressure (hPa)</th>
-						<th>Humidity (%)</th>
+						<th>Name</th>
+						<th>Weight</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -40,8 +39,7 @@ class RecruitList extends Component {
 }
 
 function mapStateToProps({recruits}) {
-	return { recruits }; //weather because we combined it to weather on the reducer
-	//{ weather } === { weather: weather }
+	return { recruits }; 
 }
 
 export default connect(mapStateToProps)(RecruitList);

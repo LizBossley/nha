@@ -1,35 +1,18 @@
 import React, { Component } from 'react';
 import { connect} from 'react-redux';
+import PostsList from './posts-list';
 
 class Dashboard extends Component {
-	renderList() {
-		return this.props.members.map((member) => {
-			return (
-				<tr key={member.id} >
-					<td>{member.id}</td>
-					<td>{member.name}</td>
-					<td>{member.race}</td>			
-				</tr>
-			);
-		});
-	}
 
 	render() {
 		return (
 			<div>
 				<h2>Home</h2>
-				<table className="stacked hover">
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Name</th>
-							<th>Race</th>
-						</tr>
-					</thead>
-					<tbody>
-						{this.renderList()}
-					</tbody>
-				</table>
+				<div className="row">
+					<div className="small-6 columns">
+						<PostsList />
+					</div>
+				</div>
 			</div>
 		);
 	}
