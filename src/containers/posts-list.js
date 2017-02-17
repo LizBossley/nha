@@ -38,12 +38,6 @@ class PostsList extends Component {
 	}
 }
 
-// function mapDispatchToProps(dispatch) {
-// 	return bindActionCreators({ fetchPosts }, dispatch);
-// }
-// we cna remove the above function, and replace it below with { fetchPosts: fetchPosts } to accomplish the same thing
-//without the extra boilerplate, which we can also reduce to { fetchPosts } with es6
-
 function mapStateToProps(state) {
 	return { posts: state.posts.all };
 }

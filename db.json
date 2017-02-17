@@ -1,9 +1,10 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "Test post",
+      "categories": "Post post post post ",
+      "content": "Post post post post\n",
+      "id": 1
     }
   ],
   "students": [
@@ -11,7 +12,11 @@
       "id": 1,
       "name": "some comment",
       "notes": "Notes",
-      "courses" : [ 1, 2, 3 ]
+      "courses": [
+        1,
+        2,
+        3
+      ]
     }
   ],
   "faculty": [
@@ -20,13 +25,7 @@
       "body": "some comment"
     }
   ],
-  "recruits": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "recruits": [],
   "courses": [
     {
       "id": 1,
