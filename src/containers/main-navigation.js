@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import UserList from './user-list';
 
 class MainNav extends Component {
 	render() {
@@ -11,16 +12,7 @@ class MainNav extends Component {
 				    </ul>
 				</div>
 			  	<div className="top-bar-right">
-				    <ul className="dropdown menu" data-dropdown-menu>
-				      	<li>
-				        	<a href="#">John Student</a>
-				        	<ul className="menu vertical">
-					          	<li><Link to="/account">Account</Link></li>
-					          	<li><a href="#">Help</a></li>
-					          	<li><a href="#">Logout</a></li>
-			        		</ul>
-			      		</li>
-			    	</ul>
+				    <UserList />
 			  	</div>
 			</div>
 		);

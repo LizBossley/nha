@@ -7,22 +7,28 @@
       "id": 1
     }
   ],
-  "students": [
+  "users": [
     {
       "id": 1,
-      "name": "some comment",
+      "type": "faculty",
+      "name": "Anakin Skywalker",
       "notes": "Notes",
       "courses": [
         1,
         2,
         3
       ]
-    }
-  ],
-  "faculty": [
+    },
     {
-      "id": 1,
-      "body": "some comment"
+      "id": 2,
+      "type:": "student",
+      "name": "Ahsoka Tano",
+      "notes": "Notes",
+      "courses": [
+        1,
+        2,
+        3
+      ]
     }
   ],
   "recruits": [],
