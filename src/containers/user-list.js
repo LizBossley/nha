@@ -38,7 +38,7 @@ class UserList extends Component {
 		        	<a href="#">
 		        	{this.checkActiveUser()}
 		        	</a>
-		        	<ul>
+		        	<ul className="user-list">
 			        	{this.renderList()}
 			        	<li onClick={() => this.props.selectUser(null)}>
 			        		Logout

@@ -1,0 +1,13 @@
+ul.user-list {
+	list-style: none;
+}
+
+ul.user-list > li {
+	padding: 10px;
+	cursor: pointer;
+}
+
+ul.user-list > li:hover {
+	background-color: #8f8f8f;
+	color: #fff;
+}

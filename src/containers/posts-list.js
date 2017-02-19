@@ -8,6 +8,18 @@ class PostsList extends Component {
 		this.props.fetchPosts();
 	}
 
+	checkActiveUser() {
+		if(this.props.activeUser && this.props.activeUser.type == "faculty") {
+			return 	(
+				<div className="text-xs-right">
+					<Link to="/posts/new" className="btn btn-primary">
+						Add a Post
+					</Link>
+				</div>
+			);				
+		} 
+	}
+
 	renderPosts() {
 		return this.props.posts.map((post) => {
 			return (
@@ -24,11 +36,7 @@ class PostsList extends Component {
 	render () {
 		return (
 			<div>
-				<div className="text-xs-right">
-					<Link to="/posts/new" className="btn btn-primary">
-						Add a Post
-					</Link>
-				</div>
+				{this.checkActiveUser()}
 				<h3>Posts</h3>
 				<ul className="list-group">
 					{this.renderPosts()}
@@ -39,7 +47,10 @@ class PostsList extends Component {
 }
 
 function mapStateToProps(state) {
-	return { posts: state.posts.all };
+	return { 
+		posts: state.posts.all,
+		activeUser: state.activeUser
+	 };
 }
 
 export default connect(mapStateToProps, { fetchPosts })(PostsList);
