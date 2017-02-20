@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
 import { connect} from 'react-redux';
-
-import SearchBar from './recruit-search-bar';
 import RecruitList from './recruit-list';
 
 class Recruitment extends Component {
-	renderList() {
-		return this.props.members.map((member) => {
-			return (
-				<tr key={member.id} >
-					<td>{member.id}</td>
-					<td>{member.name}</td>
-					<td>{member.race}</td>			
-				</tr>
-			);
-		});
-	}
+	// renderList() {
+	// 	return this.props.recruits.map((recruit) => {
+	// 		return (
+	// 			<tr key={recruit.id} >
+	// 				<td>{recruit.id}</td>
+	// 				<td>{recruit.name}</td>
+	// 				<td>{recruit.race}</td>			
+	// 			</tr>
+	// 		);
+	// 	});
+	// }
 
 	render() {
 		return (
 			<div>
 				<h2>Recruitment</h2>
-				<SearchBar />
 				<RecruitList />
 			</div>
 		);
@@ -29,10 +26,8 @@ class Recruitment extends Component {
 }
 
 function mapStateToProps(state) {
-	// Whatever is returned will show up as props 
-	// inside of BookList
 	return {
-		members: state.members 
+		recruits: state.recruits 
 	};
 }
 

@@ -1,45 +1,52 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { connect} from 'react-redux';
+import { fetchRecruits } from '../actions/index';
 
 class RecruitList extends Component {
-	renderRecruit(recruitData) {
-		if (!recruitData) {
-			return <tr><td>No results to display. Try another name</td></tr>;
-		}
-
-		console.log(recruitData);
-
-		const name = recruitData.name;
-		const weight = recruitData.weight;
-
-		return (
-			<tr key={name}>
-				<td>{name}</td>
-				<td>{weight}</td>
-				<td></td>
-			</tr>
-		);
+	componentWillMount() {
+		this.props.fetchRecruits();
 	}
 
-	render () {
+	renderList() {
+		console.log("recruits");
+		console.log(this.props.recruits);
+		return this.props.recruits.map((recruit) => {
+			return (
+				<div className="row" key={recruit.id}>
+					<div className="small-4 columns">
+						{recruit.name}
+					</div>	
+					<div className="small-4 columns">
+						{recruit.name}
+					</div>
+					<div className="small-4 columns">
+						{recruit.notes}
+					</div>		
+				</div>
+			);
+		});
+	}
+
+	render() {
 		return (
-			<table className="table table-hover">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Weight</th>
-					</tr>
-				</thead>
-				<tbody>
-					{this.props.recruits.map(this.renderRecruit)}
-				</tbody>
-			</table>
+			<div className="recruits-list">
+				<div className="row">
+					<div className="small-4 columns">ID</div>
+					<div className="small-4 columns">Name</div>
+					<div className="small-4 columns">Notes</div>
+				</div>
+				{this.renderList()}
+			</div>
 		);
 	}
 }
 
-function mapStateToProps({recruits}) {
-	return { recruits }; 
+function mapStateToProps(state) {
+	return {
+		recruits: state.recruits.all
+	};
 }
 
-export default connect(mapStateToProps)(RecruitList);
+export default connect(mapStateToProps, { fetchRecruits })(RecruitList);
+
+

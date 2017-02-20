@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-const ROOT_URL = `http://pokeapi.co/api/v2/pokemon/`;
 const POSTS_URL = `http://localhost:3000/posts`;
 const USERS_URL = `http://localhost:3000/users`;
+const RECRUITS_URL = `http://localhost:3000/recruits`;
 
 export const FETCH_RECRUIT = 'FETCH_RECRUIT';
+export const FETCH_RECRUITS = 'FETCH_RECRUITS';
 export const FETCH_POSTS = 'FETCH_POSTS';
 export const FETCH_POST = 'FETCH_POST';
 export const CREATE_POST = 'CREATE_POST';
@@ -13,9 +14,19 @@ export const USER_ACTIVE = 'USER_ACTIVE';
 export const FETCH_USERS = 'FETCH_USERS';
 export const FETCH_USER = 'FETCH_USER';
 
-export function fetchRecruit(person) {
-	const url = `${ROOT_URL}${person}/`;
-	const request = axios.get(url);
+export function fetchRecruits() {
+	const request = axios.get(RECRUITS_URL);
+	console.log(request);
+
+	return {
+		type: FETCH_RECRUITS,
+		payload: request
+	};
+}
+
+export function fetchRecruit(id) {
+	const request = axios.get(`${RECRUITS_URL}/${id}`);
+	console.log(request);
 
 	return {
 		type: FETCH_RECRUIT,
@@ -25,7 +36,6 @@ export function fetchRecruit(person) {
 
 export function fetchPosts() {
 	const request = axios.get(POSTS_URL);
-	console.log(request);
 
 	return {
 		type: FETCH_POSTS,
@@ -70,7 +80,6 @@ export function selectUser(user) {
 
 export function fetchUsers() {
 	const request = axios.get(USERS_URL);
-	console.log(request);
 
 	return {
 		type: FETCH_USERS,

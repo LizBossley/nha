@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import MainNav from '../containers/main-navigation.js';
-import SideBar from '../containers/side-bar.js';
+import MainNav from './main-navigation';
+import SideBar from '../containers/side-bar';
 
 export default class App extends Component {
   render() {

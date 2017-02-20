@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import UserList from './user-list';
+import UserList from '../containers/user-list';
 
 class MainNav extends Component {
 	render() {
@@ -8,7 +8,7 @@ class MainNav extends Component {
 			<div className="top-bar">
 				<div className="top-bar-left">
 					<ul className="dropdown menu" data-dropdown-menu>
-				      	<li className="menu-text"><Link to="/">Site Title</Link></li>
+				      	<li className="menu-text"><Link to="/">New Hope Academy</Link></li>
 				    </ul>
 				</div>
 			  	<div className="top-bar-right">
