@@ -20,6 +20,18 @@ class PostsShow extends Component {
 		});
 	}
 
+	checkActiveUser() {
+		if(this.props.activeUser && this.props.activeUser.type == "faculty") {
+			return 	(
+				<button 
+					className="button alert float-right"
+					onClick={this.onDeleteClick.bind(this)}>
+					Delete Post
+				</button>
+			);				
+		} 
+	}
+
 	render () {
 		const { post } = this.props;
 
@@ -29,12 +41,8 @@ class PostsShow extends Component {
 
 		return (
 			<div>
-				<Link to="/">Back to Index</Link>
-				<button 
-					className="button alert float-right"
-					onClick={this.onDeleteClick.bind(this)}>
-					Delete Post
-				</button>
+				<Link to="/">Back to Dashboard</Link>
+				{this.checkActiveUser()}
 				<h3>{post.title}</h3>
 				<h6>Categories: {post.categories}</h6>
 				<p>{post.content}</p>
@@ -44,7 +52,10 @@ class PostsShow extends Component {
 }
 
 function mapStateToProps(state) {
-	return { post: state.posts.post };
+	return { 
+		post: state.posts.post,
+		activeUser: state.activeUser
+	};
 }
 
 export default connect(mapStateToProps, { fetchPost, deletePost })(PostsShow);

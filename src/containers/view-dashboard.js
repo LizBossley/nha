@@ -9,7 +9,7 @@ class Dashboard extends Component {
 			<div>
 				<h2>Home</h2>
 				<div className="row">
-					<div className="small-6 columns">
+					<div className="small-8 columns">
 						<PostsList />
 					</div>
 				</div>

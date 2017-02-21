@@ -35,7 +35,7 @@ export function fetchRecruit(id) {
 }
 
 export function fetchPosts() {
-	const request = axios.get(POSTS_URL);
+	const request = axios.get(`${POSTS_URL}/?_limit=5&_sort=id&_order=DESC`);
 
 	return {
 		type: FETCH_POSTS,

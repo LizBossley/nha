@@ -1,10 +1,16 @@
 {
   "posts": [
     {
-      "title": "Test post",
-      "categories": "Post post post post ",
-      "content": "Post post post post\n",
+      "title": "Spring Break",
+      "categories": "Vacation, Spring Break, Homework",
+      "content": "Lucas ipsum dolor sit amet mandalorians utapau moff fisto binks skywalker luuke obi-wan skywalker boba. Sith ackbar gamorrean r2-d2. Vader droid jade grievous binks binks jabba yavin hutt. Jade fett sidious ahsoka. Coruscant sidious wicket luke skywalker ventress. Binks darth moff darth utapau sidious solo. Calrissian darth luke darth lando skywalker amidala antilles calamari. Jawa skywalker mace kenobi. C-3p0 lars moff organa. Skywalker vader windu organa solo tatooine secura darth. Kenobi darth darth darth.",
       "id": 1
+    },
+    {
+      "title": "Final Exams",
+      "categories": "Exams, Students, Grades",
+      "content": "Greedo moff moff skywalker hutt. Jabba mon darth skywalker. Chewbacca bothan tusken raider amidala han twi'lek thrawn gonk. Calamari mustafar skywalker boba. Greedo organa sidious jango skywalker. Fett c-3p0 darth leia jabba dagobah. Organa luke vader boba cade sebulba skywalker hutt. Wedge moff cade kessel windu qui-gonn skywalker. Palpatine organa maul naboo moff qui-gon vader vader. Wookiee vader qui-gonn solo wookiee. Hutt zabrak skywalker dooku biggs yoda hutt. Skywalker wampa fett moff qui-gonn mandalore wampa moff.",
+      "id": 2
     }
   ],
   "users": [
@@ -53,14 +59,50 @@
     {
       "id": 2,
       "type": "student",
-      "name": "Recruit 1",
-      "notes": "Notes"
+      "name": "Ganodi",
+      "notes": "Notes",
+      "race": "Rodian",
+      "skills": [ "Lightsabers", "Fighting" ]
     },
     {
       "id": 5,
       "type": "faculty",
-      "name": "Recruit 2",
-      "notes": "Notes"
+      "name": "Obi Wan Kenobi",
+      "notes": "Notes",
+      "race": "Human",
+      "skills": [ "Lightsabers", "Fighting", "Jedi Mind Tricks" ]
+    },
+    {
+      "id": 3,
+      "type": "student",
+      "name": "Petro",
+      "notes": "Notes",
+      "race": "Human",
+      "skills": [ "Leadership", "Fighting" ]
+    },
+    {
+      "id": 4,
+      "type": "faculty",
+      "name": "Wes Janson",
+      "notes": "Notes",
+      "race": "Human",
+      "skills": [ "Pilot", "Fighting" ]
+    },
+    {
+      "id": 6,
+      "type": "student",
+      "name": "Gungi",
+      "notes": "Notes",
+      "race": "Wookie",
+      "skills": [ "Wookie", "Meditation" ]
+    },
+    {
+      "id": 7,
+      "type": "faculty",
+      "name": "Rex",
+      "notes": "Notes",
+      "race": "Human Clone",
+      "skills": [ "Battle Tactics", "Leadership", "Shooting" ]
     }
   ],
   "courses": [

@@ -13,14 +13,14 @@ class RecruitList extends Component {
 		return this.props.recruits.map((recruit) => {
 			return (
 				<div className="row" key={recruit.id}>
-					<div className="small-4 columns">
+					<div className="small-3 columns">
 						{recruit.name}
 					</div>	
-					<div className="small-4 columns">
-						{recruit.name}
+					<div className="small-3 columns">
+						{recruit.race}
 					</div>
-					<div className="small-4 columns">
-						{recruit.notes}
+					<div className="small-6 columns">
+						{recruit.skills.join(", ")}
 					</div>		
 				</div>
 			);
@@ -31,9 +31,9 @@ class RecruitList extends Component {
 		return (
 			<div className="recruits-list">
 				<div className="row">
-					<div className="small-4 columns">ID</div>
-					<div className="small-4 columns">Name</div>
-					<div className="small-4 columns">Notes</div>
+					<div className="small-3 columns">Name</div>
+					<div className="small-3 columns">Race</div>
+					<div className="small-6 columns">Skills</div>
 				</div>
 				{this.renderList()}
 			</div>

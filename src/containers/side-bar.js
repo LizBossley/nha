@@ -24,12 +24,20 @@ class SideBar extends Component {
 		} 
 	}
 
+	renderAdminLinks() {
+		if(this.props.activeUser && this.props.activeUser.type == "faculty") {
+			return (
+				<li><Link to="/recruitment">Recruitment</Link></li>
+			);
+		} 
+	}
+
 	render() {
 		return(
 			<div >
 				<ul className="vertical menu" data-accordion-menu>				    
 			    	{this.renderCourseList()}
-				  	<li><Link to="/recruitment">Recruitment</Link></li>
+				  	{this.renderAdminLinks()}
 				  	<li><a href="#">About Us</a></li>
 				  	<li><a href="#">Support</a></li>
 				</ul>

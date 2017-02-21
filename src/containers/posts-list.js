@@ -11,11 +11,11 @@ class PostsList extends Component {
 	checkActiveUser() {
 		if(this.props.activeUser && this.props.activeUser.type == "faculty") {
 			return 	(
-				<div className="text-xs-right">
+				<span className="pull-xs-right">
 					<Link to="/posts/new" className="btn btn-primary">
 						Add a Post
 					</Link>
-				</div>
+				</span>
 			);				
 		} 
 	}
@@ -23,12 +23,12 @@ class PostsList extends Component {
 	renderPosts() {
 		return this.props.posts.map((post) => {
 			return (
-				<li className="list-group-item" key={post.id}>
+				<div className="small-12 columns" key={post.id}>
 					<Link to={"posts/" + post.id}>
-						<span className="pull-xs-right">{post.categories}</span>
-						<strong>{post.title}</strong>
+						<h5>{post.title}</h5>
 					</Link>
-				</li>
+					<div>{post.content}</div>
+				</div>
 				);
 		});
 	}
@@ -36,11 +36,17 @@ class PostsList extends Component {
 	render () {
 		return (
 			<div>
-				{this.checkActiveUser()}
-				<h3>Posts</h3>
-				<ul className="list-group">
+				<div className="row">
+					<div className="small-8 columns">
+						<h3>Recent News</h3>
+					</div>
+					<div className="small-4 columns">
+						{this.checkActiveUser()}
+					</div>
+				</div>
+				<div className="row">
 					{this.renderPosts()}
-				</ul>
+				</div>
 			</div>
 		);
 	}
