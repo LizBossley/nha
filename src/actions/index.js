@@ -9,6 +9,7 @@ export const FETCH_RECRUITS = 'FETCH_RECRUITS';
 export const FETCH_POSTS = 'FETCH_POSTS';
 export const FETCH_POST = 'FETCH_POST';
 export const CREATE_POST = 'CREATE_POST';
+export const EDIT_POST = 'EDIT_POST';
 export const DELETE_POST = 'DELETE_POST';
 export const USER_ACTIVE = 'USER_ACTIVE';
 export const FETCH_USERS = 'FETCH_USERS';
@@ -46,6 +47,7 @@ export function fetchPosts() {
 export function fetchPost(id) {
 	const request = axios.get(`${POSTS_URL}/${id}`);
 
+	console.log(request);
 	return {
 		type: FETCH_POST,
 		payload: request
@@ -58,6 +60,15 @@ export function createPost(props) {
 
 	return {
 		type: CREATE_POST,
+		payload: request
+	};
+}
+
+export function editPost(id, props) {
+	const request = axios.put(`${POSTS_URL}/${id}`, props);
+
+	return {
+		type: EDIT_POST,
 		payload: request
 	};
 }

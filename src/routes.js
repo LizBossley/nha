@@ -8,6 +8,7 @@ import Account from './containers/view-account';
 import Recruitment from './containers/view-recruitment';
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show';
+import PostsEdit from './components/posts_edit';
 
 export default (
 	<Route path="/" component={App}>
@@ -16,5 +17,6 @@ export default (
 		<Route path="/recruitment" component={Recruitment} />
 		<Route path="posts/new" component={PostsNew} />
 		<Route path="posts/:id" component={PostsShow} />
+		<Route path="posts/edit/:id" component={PostsEdit} />
 	</Route>
 );

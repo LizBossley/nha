@@ -7,9 +7,9 @@
       "id": 1
     },
     {
-      "title": "Final Exams",
+      "title": "Test Final Exam",
       "categories": "Exams, Students, Grades",
-      "content": "Greedo moff moff skywalker hutt. Jabba mon darth skywalker. Chewbacca bothan tusken raider amidala han twi'lek thrawn gonk. Calamari mustafar skywalker boba. Greedo organa sidious jango skywalker. Fett c-3p0 darth leia jabba dagobah. Organa luke vader boba cade sebulba skywalker hutt. Wedge moff cade kessel windu qui-gonn skywalker. Palpatine organa maul naboo moff qui-gon vader vader. Wookiee vader qui-gonn solo wookiee. Hutt zabrak skywalker dooku biggs yoda hutt. Skywalker wampa fett moff qui-gonn mandalore wampa moff.",
+      "content": "Greedo wookie ",
       "id": 2
     }
   ],
@@ -62,7 +62,10 @@
       "name": "Ganodi",
       "notes": "Notes",
       "race": "Rodian",
-      "skills": [ "Lightsabers", "Fighting" ]
+      "skills": [
+        "Lightsabers",
+        "Fighting"
+      ]
     },
     {
       "id": 5,
@@ -70,7 +73,11 @@
       "name": "Obi Wan Kenobi",
       "notes": "Notes",
       "race": "Human",
-      "skills": [ "Lightsabers", "Fighting", "Jedi Mind Tricks" ]
+      "skills": [
+        "Lightsabers",
+        "Fighting",
+        "Jedi Mind Tricks"
+      ]
     },
     {
       "id": 3,
@@ -78,7 +85,10 @@
       "name": "Petro",
       "notes": "Notes",
       "race": "Human",
-      "skills": [ "Leadership", "Fighting" ]
+      "skills": [
+        "Leadership",
+        "Fighting"
+      ]
     },
     {
       "id": 4,
@@ -86,7 +96,10 @@
       "name": "Wes Janson",
       "notes": "Notes",
       "race": "Human",
-      "skills": [ "Pilot", "Fighting" ]
+      "skills": [
+        "Pilot",
+        "Fighting"
+      ]
     },
     {
       "id": 6,
@@ -94,7 +107,10 @@
       "name": "Gungi",
       "notes": "Notes",
       "race": "Wookie",
-      "skills": [ "Wookie", "Meditation" ]
+      "skills": [
+        "Wookie",
+        "Meditation"
+      ]
     },
     {
       "id": 7,
@@ -102,7 +118,11 @@
       "name": "Rex",
       "notes": "Notes",
       "race": "Human Clone",
-      "skills": [ "Battle Tactics", "Leadership", "Shooting" ]
+      "skills": [
+        "Battle Tactics",
+        "Leadership",
+        "Shooting"
+      ]
     }
   ],
   "courses": [
