@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect} from 'react-redux';
-import PostsList from './posts-list';
+import PostsList from '../../containers/posts-list';
 
 class Dashboard extends Component {
 

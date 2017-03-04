@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect} from 'react-redux';
-import { fetchRecruits } from '../actions/index';
+import { fetchRecruits } from '../../actions/index';
 
 class RecruitList extends Component {
 	componentWillMount() {

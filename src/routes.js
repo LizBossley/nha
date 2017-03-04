@@ -3,9 +3,9 @@ import { Route, IndexRoute } from 'react-router';
 
 import App from './components/app';
 import MainNavigation from './components/main-navigation';
-import Dashboard from './containers/view-dashboard';
-import Account from './containers/view-account';
-import Recruitment from './containers/view-recruitment';
+import Dashboard from './scenes/dashboard/view-dashboard';
+import Account from './scenes/account/view-account';
+import Recruitment from './scenes/recruit/view-recruitment';
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show';
 import PostsEdit from './components/posts_edit';
