@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect} from 'react-redux';
+import { fetchCourses } from '../actions/index';
 
 class SideBar extends Component {
+	// componentWillReceiveProps() {
+	// 	if(this.props.activeUser) {
+	// 		console.log("yo");
+	// 		this.props.fetchCourses(this.props.activeUser.courses);
+	// 	}		
+	// }
+
 	renderCourseList() {
 		if(this.props.activeUser) {
+			// console.log(this.props.activeUser);
+			this.props.fetchCourses(this.props.activeUser.courses);
 			return (
 				<li>
 					<a href="#">Courses</a>
 					<ul className="menu vertical nested">
 						{
-							this.props.activeUser.courses.map((course) => {
-								return (
-									<li key={course.id}>
-										<a href="#">{course.title}</a>
-									</li>
-								);
-							})
+							
+
 						}
 					</ul>
 				</li>
@@ -48,8 +53,9 @@ class SideBar extends Component {
 
 function mapStateToProps(state) {
 	return {
-		activeUser: state.activeUser  
+		activeUser: state.activeUser,
+		course: state.courses.all  
 	};
 }
 
-export default connect(mapStateToProps, null)(SideBar);
+export default connect(mapStateToProps,{ fetchCourses })(SideBar);

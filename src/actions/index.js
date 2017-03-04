@@ -3,6 +3,7 @@ import axios from 'axios';
 const POSTS_URL = `http://localhost:3000/posts`;
 const USERS_URL = `http://localhost:3000/users`;
 const RECRUITS_URL = `http://localhost:3000/recruits`;
+const COURSES_URL = `http://localhost:3000/courses`;
 
 export const FETCH_RECRUIT = 'FETCH_RECRUIT';
 export const FETCH_RECRUITS = 'FETCH_RECRUITS';
@@ -14,10 +15,11 @@ export const DELETE_POST = 'DELETE_POST';
 export const USER_ACTIVE = 'USER_ACTIVE';
 export const FETCH_USERS = 'FETCH_USERS';
 export const FETCH_USER = 'FETCH_USER';
+export const FETCH_COURSES = 'FETCH_COURSES';
+export const FETCH_COURSE = 'FETCH_COURSE';
 
 export function fetchRecruits() {
 	const request = axios.get(RECRUITS_URL);
-	console.log(request);
 
 	return {
 		type: FETCH_RECRUITS,
@@ -27,7 +29,6 @@ export function fetchRecruits() {
 
 export function fetchRecruit(id) {
 	const request = axios.get(`${RECRUITS_URL}/${id}`);
-	console.log(request);
 
 	return {
 		type: FETCH_RECRUIT,
@@ -103,6 +104,32 @@ export function fetchUser(id) {
 
 	return {
 		type: FETCH_USER,
+		payload: request
+	};
+}
+
+export function fetchCourses(courses) {
+	console.log(courses);
+	var id_params = "?";
+	courses.map((course) => {
+		console.log(id_params);
+		id_params += `&id=${course}`;
+	})			
+
+	const request = axios.get(`${COURSES_URL}/${id_params}`);
+	console.log(request);
+
+	return {
+		type: FETCH_COURSES,
+		payload: request
+	};
+}
+
+export function fetchCourse(id) {
+	const request = axios.get(`${COURSES_URL}/${id}`);
+
+	return {
+		type: FETCH_COURSE,
 		payload: request
 	};
 }
