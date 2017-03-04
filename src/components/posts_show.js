@@ -23,11 +23,16 @@ class PostsShow extends Component {
 	checkActiveUser() {
 		if(this.props.activeUser && this.props.activeUser.type == "faculty") {
 			return 	(
-				<button 
-					className="button alert float-right"
-					onClick={this.onDeleteClick.bind(this)}>
-					Delete Post
-				</button>
+				<div>
+					<button 
+						className="button alert float-right"
+						onClick={this.onDeleteClick.bind(this)}>
+						Delete Post
+					</button>
+					<Link to={`/posts/edit/${this.props.params.id}`} className="button info float-right">
+						Edit Post
+					</Link>
+				</div>
 			);				
 		} 
 	}

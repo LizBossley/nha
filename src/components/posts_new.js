@@ -18,8 +18,6 @@ const FIELDS = {
 		label: 'Post Contents'
 	}
 };
-//This is also where you would put in custom validation for each field, and custom error messages
-//['title', 'categories', 'content'];
 
 class PostsNew extends Component {
 	static contextTypes = {
@@ -29,8 +27,6 @@ class PostsNew extends Component {
 	onSubmit(props) {
 		this.props.createPost(props)
 		.then(() => {
-			//blog post has been created, navigate user to the index
-			//navigate by calling this.context.router.push with the new path to navigate to
 			this.context.router.push('/');
 		});
 	}
