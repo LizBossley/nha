@@ -20,18 +20,7 @@
       "name": "Anakin Skywalker",
       "notes": "Notes",
       "courses": [
-        {
-          "id": 1,
-          "title": "Math"
-        },
-        {
-          "id": 2,
-          "title": "Science"
-        },
-        {
-          "id": 3,
-          "title": "Wookie"
-        }
+        1, 2, 3, 4
       ]
     },
     {
@@ -40,18 +29,7 @@
       "name": "Ahsoka Tano",
       "notes": "Notes",
       "courses": [
-        {
-          "id": 4,
-          "title": "Lightsaber Techniques"
-        },
-        {
-          "id": 5,
-          "title": "Physics"
-        },
-        {
-          "id": 3,
-          "title": "Wookie"
-        }
+        4, 5, 6, 7
       ]
     }
   ],
@@ -128,7 +106,37 @@
   "courses": [
     {
       "id": 1,
-      "subject": "course 1",
+      "subject": "History",
+      "teacherId": 1
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "teacherId": 1
+    },
+    {
+      "id": 3,
+      "subject": "Lightsabers",
+      "teacherId": 1
+    },
+    {
+      "id": 4,
+      "subject": "Piloting",
+      "teacherId": 1
+    },
+    {
+      "id": 5,
+      "subject": "Battle Tactics",
+      "teacherId": 1
+    },
+    {
+      "id": 6,
+      "subject": "Meditation",
+      "teacherId": 1
+    },
+    {
+      "id": 7,
+      "subject": "Politics",
       "teacherId": 1
     }
   ],
