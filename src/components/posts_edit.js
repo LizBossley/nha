@@ -29,23 +29,6 @@ class PostsEdit extends Component {
 		this.props.fetchPost(this.props.params.id);
 	}
 
-	componentDidMount() {
-	  this.handleInitialize();	
-	  console.log("I'm here!");
-	}
-
-	handleInitialize() {
-		console.log(this.props);
-
-	  const initData = {
-	    "title": this.props.post.title,
-	    "categories": this.props.post.categories,
-	    "content": this.props.posts.content
-	  };
-
-	  // this.props.initialize(initData);
-	}
-
 	onSubmit(props) {
 		this.props.editPost(this.props.params.id, props)
 		.then(() => {
@@ -69,7 +52,7 @@ class PostsEdit extends Component {
 
 	render () {
 		console.log(this.props);
-		const { handleSubmit, pristine } = this.props;
+		const { handleSubmit, fetchPost, pristine } = this.props;
 
 		return (
 			<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
@@ -104,8 +87,9 @@ PostsEdit = reduxForm({
 
 function mapStateToProps(state) {
 	return { 
-		post: state.posts.post
+		initialValues: state.posts.post
 	};
 }
 
 export default connect(mapStateToProps, { fetchPost, editPost })(PostsEdit);
+
